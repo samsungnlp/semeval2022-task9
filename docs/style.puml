@@ -1,0 +1,49 @@
+skinparam activity {
+    StartColor LightSkyBlue
+    BarColor DarkBlue
+    EndColor LightSkyBlue
+    BorderColor DarkBlue
+    BackgroundColor LightBlue
+    ArrowColor black
+}
+
+skinparam file {
+    BarColor DarkBlue
+    BorderColor DarkBlue
+    BackgroundColor LightSteelBlue
+    ArrowColor black
+}
+
+skinparam component {
+    BarColor DarkBlue
+    BorderColor DarkBlue
+    BackgroundColor LightBlue
+    BackgroundColor<< main >> DeepSkyBlue
+    BackgroundColor<< thirdparty >> Silver
+    ArrowColor black
+}
+
+skinparam database {
+    BarColor DarkBlue
+    BorderColor DarkBlue
+    BackgroundColor LightBlue
+    BackgroundColor<< main >> DeepSkyBlue
+    BackgroundColor<< thirdparty >> Silver
+    ArrowColor black
+}
+
+skinparam class {
+    BarColor DarkBlue
+    BorderColor DarkBlue
+    BackgroundColor LightBlue
+    BackgroundColor<< main >> DeepSkyBlue
+    BackgroundColor<< thirdparty >> Silver
+    ArrowColor black
+}
+
+skinparam note {
+    BarColor DarkBlue
+    BorderColor DarkBlue
+    BackgroundColor Lavender
+    ArrowColor black
+}

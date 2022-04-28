@@ -1,0 +1,74 @@
+@startuml
+
+title Pipeline Overview
+
+class  EndToEndQuestionAnsweringPrediction {
+  + run_prediction()
+  + add_qa_handler(a_handler)
+
+  - dispatching_engine : QuestionAnsweringDispatcher
+  - qa_handlers : List[InterfaceHandler]
+}
+
+class QuestionAnsweringDispatcher {
+  - dispatching_table:Dict[str, InterfaceQuestionAnswering ]
+  + predict_answer(question)
+  + predict_answers(questions)
+}
+
+interface InterfaceQuestionAnswering{
+
+  + {abstract} answer_a_question()
+  + {abstract} batch_answer_questions()
+}
+
+interface InterfaceHandler{
+  + {abstract} handle_questions_answers()
+}
+
+class HandlerSaveToJson {
+  + handle_questions_answers()
+}
+
+class QuestionAnsweringBase{
+  + batch_answer_questions()
+}
+note right
+Add your new QA engine here
+end note
+
+class QuestionAnswererNA{
+  + answer_a_question()
+}
+
+class QuestionAnswererConstantAnswer{
+  + answer_a_question()
+}
+
+interface QuestionCategoryClassifier {
+  + {abstract} predict_category()
+}
+
+class GetCategoryFromQuestionId {
+ + predict_category(question)
+}
+
+EndToEndQuestionAnsweringPrediction  *-left- "1" QuestionAnsweringDispatcher
+
+EndToEndQuestionAnsweringPrediction  *-right- "*" InterfaceHandler
+
+QuestionAnsweringDispatcher *-down- "*" InterfaceQuestionAnswering
+
+QuestionAnsweringDispatcher *-- "1" QuestionCategoryClassifier
+
+
+QuestionAnsweringBase -up-|>  InterfaceQuestionAnswering
+
+QuestionAnswererNA -up-|>  QuestionAnsweringBase
+QuestionAnswererConstantAnswer -up-|>  QuestionAnsweringBase
+
+HandlerSaveToJson -up-|>  InterfaceHandler
+
+GetCategoryFromQuestionId -up-|> QuestionCategoryClassifier
+
+@enduml

@@ -1,0 +1,59 @@
+@startuml
+
+title QA Engine Overview
+
+
+class QuestionCategory {
+  + category : str
+  + description : str
+}
+
+interface InterfaceQuestionAnswering{
+  + {abstract} answer_a_question(question, category)
+  + {abstract} batch_answer_questions(questions, categories)
+}
+
+class QuestionAnsweringBase{
+  + batch_answer_questions(questions, categories)
+}
+
+class QuestionAnswererNA{
+  + answer_a_question()
+}
+
+class QuestionAnswererConstantAnswer{
+  + answer_a_question()
+}
+
+interface QuestionCategoryClassifier {
+  + predict_category(question)
+}
+
+class QuestionAnswerRecipe {
+  + recipe : Recipe
+  + qa_copy : Q_A
+  + answer : Optional[str]
+  + question_class : str
+}
+
+class PredictedAnswer {
+  answer : str
+  confidence : float
+  raw_question: str
+  more_info: Dict[str, Any]
+}
+
+QuestionAnsweringBase -up-|>  InterfaceQuestionAnswering
+
+QuestionAnswererNA -up-|>  QuestionAnsweringBase
+QuestionAnswererConstantAnswer -up-|>  QuestionAnsweringBase
+
+QuestionCategoryClassifier --> QuestionCategory: "predicts"
+
+
+InterfaceQuestionAnswering <-left- QuestionAnswerRecipe: "input"
+InterfaceQuestionAnswering <-up- QuestionCategory: "input"
+InterfaceQuestionAnswering -right-> PredictedAnswer : "output"
+
+
+@enduml
