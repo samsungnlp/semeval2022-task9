@@ -1,0 +1,267 @@
+# newdoc id = f-6VWP66LZ
+# question 0-1 = How many actions does it take to process the minced meat?
+# answer 0-1 = 1
+# question 13-0 = What do you serve the vegetables and minced meat casserole with?
+# answer 13-0 = with cooked rice or something similar ( couscous , mashed potatoes )
+# question 18-0 = What's in the ingred mix?
+# answer 18-0 = N/A
+# question 2-1 = How do you cut the carrots and zucchini?
+# answer 2-1 = by using a knife
+# question 1-0 = What should be served?
+# answer 1-0 = the cooked rice and vegetables and minced meat casserole
+# question 2-2 = Where should you add the chopped vegetables?
+# answer 2-2 = pan
+# question 18-1 = Cooking the ingredient over a low heat until the water is absorbed and putting all the ingredients into a large saucepan, which comes first?
+# answer 18-1 = N/A
+# question 6-0 = How do you saute onion?
+# answer 6-0 = saute onion in 2 tablespoons of olive oil
+# question 0-2 = How many spatulas are used?
+# answer 0-2 = 1
+# question 4-5 = Cutting the stem into bite - size pieces into bite - size pieces and sauting minced meat in a separate pan, which comes first?
+# answer 4-5 = the first event
+# question 3-3 = How did you get the cooked vegetable?
+# answer 3-3 = by adding the chopped vegetables to the pan
+# question 3-0 = What's in the vegetables and minced meat casserole?
+# answer 3-0 = the meat
+# question 5-0 = To what extent do you cut carrots and zucchini?
+# answer 5-0 = into cubes
+# question 2-3 = Where should you saute the onion?
+# answer 2-3 = pan
+# question 3-4 = How did you get the chopped vegetable?
+# answer 3-4 = by cutting the broccoli and stem with the knife
+# question 12-0 = Where do you add the tinned tomatoes?
+# answer 12-0 = to the cooked vegetables
+# question 4-2 = Sauting minced meat in a separate pan and cutting carrots and zucchini into cubes, which comes first?
+# answer 4-2 = the second event
+# question 8-1 = Where do you saute minced meat?
+# answer 8-1 = in a separate pan
+# question 2-0 = How do you cut the broccoli and stem?
+# answer 2-0 = by using a knife
+# question 4-1 = Transferring the meat into the pan with the vegetables and adding chopped vegetables, which comes first?
+# answer 4-1 = the second event
+# question 4-0 = Transferring the meat into the pan with the vegetables and seasoning the meat, which comes first?
+# answer 4-0 = the first event
+# question 3-1 = What's in the cooked vegetable?
+# answer 3-1 = the chopped vegetables
+# question 3-2 = What's in the chopped vegetable?
+# answer 3-2 = the broccoli and stem
+# question 4-4 = Cutting carrots and zucchini into cubes and adding the tinned tomatoes, which comes first?
+# answer 4-4 = the first event
+# question 8-0 = Where do you transfer the meat?
+# answer 8-0 = into the pan with the vegetables
+# question 0-0 = How many actions does it take to process the mashed potato?
+# answer 0-0 = 1
+# question 4-3 = Combining all ingredients and transferring the meat into the pan with the vegetables, which comes first?
+# answer 4-3 = the second event
+# metadata:url = https://foodista.com/recipe/6VWP66LZ/vegetables-and-minced-meat-casserole
+# metadata:num_steps = 6
+# metadata:avg_len_steps = 16
+# metadata:num_ingres = 9
+# metadata:cluster = old
+# newpar id = f-6VWP66LZ::ingredients
+# sent_id = f-6VWP66LZ::ingredients::sent01
+# text = 500g broccoli
+1	500g	500g	NUM	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+2	broccoli	broccoli	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# sent_id = f-6VWP66LZ::ingredients::sent02
+# text = 300g carrots
+1	300g	300g	NUM	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+2	carrots	carrot	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# sent_id = f-6VWP66LZ::ingredients::sent03
+# text = 300g zucchini
+1	300g	300g	NUM	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+2	zucchini	zucchini	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# sent_id = f-6VWP66LZ::ingredients::sent04
+# text = 1 onion, chopped
+1	1	1	NUM	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+2	onion	onion	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+3	,	,	PUNCT	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+4	chopped	chop	VERB	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# sent_id = f-6VWP66LZ::ingredients::sent05
+# text = 3 tbs olive oil (2 + 1)
+1	3	3	NUM	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+2	tbs	tbs	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+3	olive	olive	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+4	oil	oil	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+5	(	(	PUNCT	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+6	2	2	NUM	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+7	+	+	SYM	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+8	1	1	NUM	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+9	)	)	PUNCT	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# sent_id = f-6VWP66LZ::ingredients::sent06
+# text = 400 g ground beef
+1	400	400	NUM	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+2	g	gram	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+3	ground	ground	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+4	beef	beef	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# sent_id = f-6VWP66LZ::ingredients::sent07
+# text = 1 can whole peeled tomatoes
+1	1	1	NUM	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+2	can	can	AUX	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+3	whole	whole	ADJ	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+4	peeled	peel	VERB	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+5	tomatoes	tomato	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# sent_id = f-6VWP66LZ::ingredients::sent08
+# text = 1/2 tsp sea salt
+1	1/2	1/2	NUM	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+2	tsp	tsp	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+3	sea	sea	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+4	salt	salt	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# sent_id = f-6VWP66LZ::ingredients::sent09
+# text = 1/2 tsp pepper
+1	1/2	1/2	NUM	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+2	tsp	tsp	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+3	pepper	pepper	NOUN	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# newpar id = f-6VWP66LZ::step01
+# sent_id = f-6VWP66LZ::step01::sent01
+# text = Cut the broccoli into flowerets and the stem into bite-size pieces; cut carrots and zucchini into cubes.
+1	Cut	cut	VERB	B-EVENT	_	_	Result=chopped_vegetables.1.1.1|Tool=knife.1.1.1	_	CUT	B-V	_	_	_	_	_	_	_	_	_
+2	the	the	DET	O	_	_	_	_	_	B-Patient	_	_	_	_	_	_	_	_	_
+3	broccoli	broccoli	NOUN	B-EXPLICITINGREDIENT	1	_	_	broccoli.1.1.3	_	I-Patient	_	_	_	_	_	_	_	_	_
+4	into	into	ADP	O	_	_	_	_	_	B-Result	_	_	_	_	_	_	_	_	_
+5	flowerets	floweret	NOUN	B-IMPLICITINGREDIENT	_	_	_	chopped_vegetables.1.1.1	_	I-Result	_	_	_	_	_	_	_	_	_
+6	and	and	CCONJ	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+7	the	the	DET	O	_	_	_	_	_	B-Patient	_	_	_	_	_	_	_	_	_
+8	stem	stem	NOUN	B-IMPLICITINGREDIENT	1	_	_	broccoli.1.1.3	_	I-Patient	_	_	_	_	_	_	_	_	_
+9	into	into	ADP	O	_	_	_	_	_	B-Result	_	_	_	_	_	_	_	_	_
+10	bite	bite	NOUN	O	_	_	_	_	_	I-Result	_	_	_	_	_	_	_	_	_
+11	-	-	PUNCT	O	_	_	_	_	_	I-Result	_	_	_	_	_	_	_	_	_
+12	size	size	NOUN	O	_	_	_	_	_	I-Result	_	_	_	_	_	_	_	_	_
+13	pieces	piece	NOUN	B-IMPLICITINGREDIENT	_	_	_	chopped_vegetables.1.1.1	_	I-Result	_	_	_	_	_	_	_	_	_
+14	;	;	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+15	cut	cut	VERB	B-EVENT	_	_	Tool=knife.1.1.1	_	CUT	_	B-V	_	_	_	_	_	_	_	_
+16	carrots	carrot	NOUN	B-EXPLICITINGREDIENT	15	_	_	carrots.1.1.16	_	_	B-Patient	_	_	_	_	_	_	_	_
+17	and	and	CCONJ	O	_	_	_	_	_	_	I-Patient	_	_	_	_	_	_	_	_
+18	zucchini	zucchini	NOUN	B-EXPLICITINGREDIENT	15	_	_	zucchini.1.1.18	_	_	I-Patient	_	_	_	_	_	_	_	_
+19	into	into	ADP	O	_	_	_	_	_	_	B-Result	_	_	_	_	_	_	_	_
+20	cubes	cube	NOUN	B-IMPLICITINGREDIENT	_	_	_	chopped_vegetables.1.1.1	_	_	I-Result	_	_	_	_	_	_	_	_
+21	.	.	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# newpar id = f-6VWP66LZ::step02
+# sent_id = f-6VWP66LZ::step02::sent01
+# text = Saute onion in 2 tablespoons of olive oil, add chopped vegetables and cook for 10 minutes over low heat, stirring occasionally.
+1	Saute	saute	VERB	B-EVENT	_	_	Habitat=pan.2.1.1	_	COOK	B-V	_	_	_	_	_	_	_	_	_
+2	onion	onion	NOUN	B-EXPLICITINGREDIENT	1	_	_	onion.2.1.2	_	B-Patient	_	_	_	_	_	_	_	_	_
+3	in	in	ADP	O	_	_	_	_	_	B-Instrument	_	_	_	_	_	_	_	_	_
+4	2	2	NUM	O	_	_	_	_	_	I-Instrument	_	_	_	_	_	_	_	_	_
+5	tablespoons	tablespoon	NOUN	O	_	_	_	_	_	I-Instrument	_	_	_	_	_	_	_	_	_
+6	of	of	ADP	O	_	_	_	_	_	I-Instrument	_	_	_	_	_	_	_	_	_
+7	olive	olive	NOUN	B-EXPLICITINGREDIENT	1	_	_	olive_oil.2.1.7	_	I-Instrument	_	_	_	_	_	_	_	_	_
+8	oil	oil	NOUN	I-EXPLICITINGREDIENT	_	_	_	_	_	I-Instrument	_	_	_	_	_	_	_	_	_
+9	,	,	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+10	add	add	VERB	B-EVENT	_	_	Result=cooked_vegetables.2.1.10|Habitat=pan.2.1.1	_	ADD	_	B-V	_	_	_	_	_	_	_	_
+11	chopped	chop	VERB	B-EXPLICITINGREDIENT	10	_	_	chopped_vegetables.1.1.1	_	_	B-Patient	_	_	_	_	_	_	_	_
+12	vegetables	vegetable	NOUN	I-EXPLICITINGREDIENT	_	_	_	_	_	_	I-Patient	_	_	_	_	_	_	_	_
+13	and	and	CCONJ	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+14	cook	cook	VERB	B-EVENT	_	_	_	_	COOK	_	_	_	B-V	_	_	_	_	_	_
+15	for	for	ADP	O	_	_	_	_	_	_	_	_	B-Time	_	_	_	_	_	_
+16	10	10	NUM	O	_	_	_	_	_	_	_	_	I-Time	_	_	_	_	_	_
+17	minutes	minute	NOUN	O	_	_	_	_	_	_	_	_	I-Time	_	_	_	_	_	_
+18	over	over	ADP	O	_	_	_	_	_	_	_	_	B-Instrument	_	_	_	_	_	_
+19	low	low	ADJ	O	_	_	_	_	_	_	_	_	I-Instrument	_	_	_	_	_	_
+20	heat	heat	NOUN	O	_	_	_	_	_	_	_	_	I-Instrument	_	_	_	_	_	_
+21	,	,	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+22	stirring	stir	VERB	B-EVENT	_	_	_	_	MOVE-SOMETHING	_	_	_	_	B-V	_	_	_	_	_
+23	occasionally	occasionally	ADV	O	_	_	_	_	_	_	_	_	_	B-Time	_	_	_	_	_
+24	.	.	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# newpar id = f-6VWP66LZ::step03
+# sent_id = f-6VWP66LZ::step03::sent01
+# text = In a separate pan saute minced meat breaking it up well, and stir for 6-8 minutes until browned.
+1	In	in	ADP	O	_	_	_	_	_	B-Location	B-Location	_	_	B-Location	_	_	_	_	_
+2	a	a	DET	O	_	_	_	_	_	I-Location	I-Location	_	_	I-Location	_	_	_	_	_
+3	separate	separate	ADJ	O	_	_	_	_	_	I-Location	I-Location	_	_	I-Location	_	_	_	_	_
+4	pan	pan	NOUN	B-HABITAT	5	_	_	pan.3.1.4	_	I-Location	I-Location	_	_	I-Location	_	_	_	_	_
+5	saute	saute	VERB	B-EVENT	_	_	_	_	COOK	B-V	B-V	_	_	_	_	_	_	_	_
+6	minced	mince	VERB	B-EXPLICITINGREDIENT	5	_	_	minced_meat.3.1.6	_	B-Patient	B-Patient	_	_	_	_	_	_	_	_
+7	meat	meat	NOUN	I-EXPLICITINGREDIENT	_	_	_	_	_	I-Patient	I-Patient	_	_	_	_	_	_	_	_
+8	breaking	break	VERB	B-EVENT	_	_	Tool=spatula.3.1.8	_	SEPARATE_FILTER_DETACH	_	_	_	B-V	_	_	_	_	_	_
+9	it	it	PRON	B-EXPLICITINGREDIENT	_	_	_	it.3.1.9	_	_	_	_	B-Patient	_	_	_	_	_	_
+10	up	up	ADP	O	_	_	_	_	_	_	_	_	D-V	_	_	_	_	_	_
+11	well	well	ADV	O	_	_	_	_	_	_	_	_	B-Attribute	_	_	_	_	_	_
+12	,	,	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+13	and	and	CCONJ	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+14	stir	stir	VERB	B-EVENT	_	_	Tool=spatula.3.1.8	_	MOVE-SOMETHING	_	_	_	_	B-V	_	_	_	_	_
+15	for	for	ADP	O	_	_	_	_	_	_	_	_	_	B-Time	_	_	_	_	_
+16	6	6	NUM	O	_	_	_	_	_	_	_	_	_	I-Time	_	_	_	_	_
+17	-	-	SYM	O	_	_	_	_	_	_	_	_	_	I-Time	_	_	_	_	_
+18	8	8	NUM	O	_	_	_	_	_	_	_	_	_	I-Time	_	_	_	_	_
+19	minutes	minute	NOUN	O	_	_	_	_	_	_	_	_	_	I-Time	_	_	_	_	_
+20	until	until	SCONJ	O	_	_	_	_	_	_	_	_	_	B-Result	_	_	_	_	_
+21	browned	brown	VERB	B-EVENT	_	_	_	_	_	_	_	_	_	I-Result	_	_	_	_	_
+22	.	.	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# newpar id = f-6VWP66LZ::step04
+# sent_id = f-6VWP66LZ::step04::sent01
+# text = Add the tinned tomatoes to the cooked vegetables, mash them coarsely, stir and combine.
+1	Add	add	VERB	B-EVENT	_	_	_	_	ADD	B-V	_	_	_	_	_	_	_	_	_
+2	the	the	DET	O	_	_	_	_	_	B-Patient	_	_	_	_	_	_	_	_	_
+3	tinned	tin	VERB	B-EXPLICITINGREDIENT	1	_	_	tinned_tomatoes.4.1.3	_	I-Patient	_	_	_	_	_	_	_	_	_
+4	tomatoes	tomato	NOUN	I-EXPLICITINGREDIENT	_	_	_	_	_	I-Patient	_	_	_	_	_	_	_	_	_
+5	to	to	ADP	O	_	_	_	_	_	B-Co-Patient	_	_	_	_	_	_	_	_	_
+6	the	the	DET	O	_	_	_	_	_	I-Co-Patient	_	_	_	_	_	_	_	_	_
+7	cooked	cook	VERB	B-IMPLICITINGREDIENT	_	16	_	cooked_vegetables.2.1.10	_	I-Co-Patient	_	_	_	_	_	_	_	_	_
+8	vegetables	vegetable	NOUN	I-IMPLICITINGREDIENT	_	_	_	_	_	I-Co-Patient	_	_	_	_	_	_	_	_	_
+9	,	,	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+10	mash	mash	VERB	B-EVENT	_	_	Tool=spoon.4.1.10	_	PRESS_PUSH_FOLD	_	B-V	_	_	_	_	_	_	_	_
+11	them	they	PRON	B-EXPLICITINGREDIENT	_	_	_	them.4.1.11	_	_	B-Patient	_	_	_	_	_	_	_	_
+12	coarsely	coarsely	ADV	O	_	_	_	_	_	_	B-Attribute	_	_	_	_	_	_	_	_
+13	,	,	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+14	stir	stir	VERB	B-EVENT	_	_	Tool=spoon.4.1.10	_	MOVE-SOMETHING	_	_	B-V	_	_	_	_	_	_	_
+15	and	and	CCONJ	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+16	combine	combine	VERB	B-EVENT	_	_	_	_	COMBINE_MIX_UNITE	_	_	_	B-V	_	_	_	_	_	_
+17	.	.	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# newpar id = f-6VWP66LZ::step05
+# sent_id = f-6VWP66LZ::step05::sent01
+# text = Transfer the meat into the pan with the vegetables, season with salt and pepper, mix thoroughly to combine all ingredients.
+1	Transfer	transfer	VERB	B-EVENT	_	_	Result=vegetables_and_minced_meat_casserole.5.1.1	_	MOVE-SOMETHING	B-V	_	_	_	_	_	_	_	_	_
+2	the	the	DET	O	_	_	_	_	_	B-Theme	B-Patient	_	_	_	_	_	_	_	_
+3	meat	meat	NOUN	B-EXPLICITINGREDIENT	1	_	_	minced_meat.3.1.6	_	I-Theme	I-Patient	_	_	_	_	_	_	_	_
+4	into	into	ADP	O	_	_	_	_	_	B-Destination	_	_	_	_	_	_	_	_	_
+5	the	the	DET	O	_	_	_	_	_	I-Destination	_	_	_	_	_	_	_	_	_
+6	pan	pan	NOUN	B-HABITAT	_	_	_	pan.5.1.6	_	I-Destination	_	_	_	_	_	_	_	_	_
+7	with	with	ADP	O	_	_	_	_	_	I-Destination	_	_	_	_	_	_	_	_	_
+8	the	the	DET	O	_	_	_	_	_	I-Destination	_	_	_	_	_	_	_	_	_
+9	vegetables	vegetable	NOUN	B-EXPLICITINGREDIENT	_	_	_	cooked_vegetables.2.1.10	_	I-Destination	_	_	_	_	_	_	_	_	_
+10	,	,	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+11	season	season	VERB	B-EVENT	_	_	_	_	CHANGE-TASTE	_	B-V	_	_	_	_	_	_	_	_
+12	with	with	ADP	O	_	_	_	_	_	_	B-Material	_	_	_	_	_	_	_	_
+13	salt	salt	NOUN	B-EXPLICITINGREDIENT	11	_	_	salt.5.1.13	_	_	I-Material	_	_	_	_	_	_	_	_
+14	and	and	CCONJ	O	_	_	_	_	_	_	I-Material	_	_	_	_	_	_	_	_
+15	pepper	pepper	NOUN	B-EXPLICITINGREDIENT	11	_	_	pepper.5.1.15	_	_	I-Material	_	_	_	_	_	_	_	_
+16	,	,	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+17	mix	mix	VERB	B-EVENT	_	_	_	_	COMBINE_MIX_UNITE	_	_	B-V	_	_	_	_	_	_	_
+18	thoroughly	thoroughly	ADV	O	_	_	_	_	_	_	_	B-Attribute	_	_	_	_	_	_	_
+19	to	to	PART	O	_	_	_	_	_	_	_	B-Result	_	_	_	_	_	_	_
+20	combine	combine	VERB	B-EVENT	_	_	_	_	COMBINE_MIX_UNITE	_	_	I-Result	B-V	_	_	_	_	_	_
+21	all	all	DET	O	_	_	_	_	_	_	_	I-Result	B-Patient	_	_	_	_	_	_
+22	ingredients	ingredient	NOUN	B-EXPLICITINGREDIENT	20	_	_	ingredients.5.1.22	_	_	_	I-Result	I-Patient	_	_	_	_	_	_
+23	.	.	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
+
+# newpar id = f-6VWP66LZ::step06
+# sent_id = f-6VWP66LZ::step06::sent01
+# text = Serve with cooked rice or something similar (couscous, mashed potatoes).
+1	Serve	serve	VERB	B-EVENT	_	_	Drop=vegetables_and_minced_meat_casserole.5.1.1	_	NOURISH_FEED	B-V	_	_	_	_	_	_	_	_	_
+2	with	with	ADP	O	_	_	_	_	_	B-Co-Theme	_	_	_	_	_	_	_	_	_
+3	cooked	cook	VERB	B-EXPLICITINGREDIENT	1	_	_	cooked_rice.6.1.3	_	I-Co-Theme	_	_	_	_	_	_	_	_	_
+4	rice	rice	NOUN	I-EXPLICITINGREDIENT	_	_	_	_	_	I-Co-Theme	_	_	_	_	_	_	_	_	_
+5	or	or	CCONJ	O	_	_	_	_	_	I-Co-Theme	_	_	_	_	_	_	_	_	_
+6	something	something	NOUN	O	_	_	_	_	_	I-Co-Theme	_	_	_	_	_	_	_	_	_
+7	similar	similar	ADJ	O	_	_	_	_	_	I-Co-Theme	_	_	_	_	_	_	_	_	_
+8	(	(	PUNCT	O	_	_	_	_	_	I-Co-Theme	_	_	_	_	_	_	_	_	_
+9	couscous	couscous	NOUN	B-EXPLICITINGREDIENT	_	_	_	couscous.6.1.9	_	I-Co-Theme	_	_	_	_	_	_	_	_	_
+10	,	,	PUNCT	O	_	_	_	_	_	I-Co-Theme	_	_	_	_	_	_	_	_	_
+11	mashed	mash	VERB	B-EXPLICITINGREDIENT	_	_	_	mashed_potatoes.6.1.11	_	I-Co-Theme	_	_	_	_	_	_	_	_	_
+12	potatoes	potato	NOUN	I-EXPLICITINGREDIENT	_	_	_	_	_	I-Co-Theme	_	_	_	_	_	_	_	_	_
+13	)	)	PUNCT	O	_	_	_	_	_	I-Co-Theme	_	_	_	_	_	_	_	_	_
+14	.	.	PUNCT	O	_	_	_	_	_	_	_	_	_	_	_	_	_	_	_
