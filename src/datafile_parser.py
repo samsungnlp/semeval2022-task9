@@ -115,9 +115,9 @@ class DatafileParser:
             raise ValueError(f"Bad dataset name = {which}")
 
         filenames = {
-            "train": f"{get_root()}/data/r2vq_train_10_28_2021/train/crl_srl.csv",
-            "val": f"{get_root()}/data/r2vq_val_12_03_2021/val/crl_srl.csv",
-            "test": f"{get_root()}/data/r2vq_test_12_03_2021/test/crl_srl.csv",
+            "train": f"{get_root()}/modules/recipe2video/data/train/crl_srl.csv",
+            "val": f"{get_root()}/modules/recipe2video/data/val/crl_srl.csv",
+            "test": f"{get_root()}/modules/recipe2video/data/test/test_WITH_ANSWERS.csv",
         }
 
         engine = DatafileParser()
