@@ -1,0 +1,3 @@
+[submodule "modules/recipe2video"]
+	path = modules/recipe2video
+	url = https://github.com/recipe2video/recipe2video.github.io.git
