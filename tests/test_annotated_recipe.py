@@ -119,7 +119,7 @@ class TestAnnotatedRecipe(unittest.TestCase):
         self.assertEqual(4, res.annotated_sentences[2].annotated_tokens[0].position_in_the_whole_recipe)
 
     def test_parsing_from_actual_resource(self):
-        file = f"{get_root()}/tests/test_resources/crl_srl.csv"
+        file = f"{get_root()}/modules/recipe2video/data/train/crl_srl.csv"
         with open(file) as f:
             lines = [l.strip() for l in f]
             lines = lines[:268]

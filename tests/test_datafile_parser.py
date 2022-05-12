@@ -88,7 +88,7 @@ class TestDatafileParser(unittest.TestCase):
         self.assertRegex(second.passage.replace("\n", "  ## "), "cook the bacon until crisp")
 
     def test_parse_from_file(self):
-        resource = f"{get_root()}/data/r2vq_train_10_28_2021/train/crl_srl.csv"
+        resource = f"{get_root()}/modules/recipe2video/data/train/crl_srl.csv"
         dataset = DatafileParser().parse_from_file(resource, limit=796)
         self.assertEqual(27 + 57, len(dataset))
         first = dataset[0]
@@ -110,8 +110,8 @@ class TestDatafileParser(unittest.TestCase):
     def test_get_resource_test(self):
         res = DatafileParser.get_resource("test")
         self.assertGreaterEqual(len(res), 3000)
-        self.assertIsNone(res[0].answer)
-        self.assertIsNone(res[99].answer)
+        # self.assertIsNone(res[0].answer)  # no longer true, the annotated test set was shared in Feb 2022
+        # self.assertIsNone(res[99].answer)
 
     def test_get_bad_resource(self):
         with self.assertRaises(ValueError):

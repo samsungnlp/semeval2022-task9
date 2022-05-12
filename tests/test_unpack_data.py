@@ -7,10 +7,10 @@ from src.unpack_data import Recipe, Q_A, convert_dataset, rewrite_to_list_of_que
 class UnpackData(unittest.TestCase):
 
     def test_convert_train_data(self):
-        filename = f"{get_root()}/tests/test_resources/crl_srl.csv"
-        dataset = convert_dataset(filename, use_tqdm=False)
+        filename = f"{get_root()}/modules/recipe2video/data/train/crl_srl.csv"
+        dataset = convert_dataset(filename, use_tqdm=False, limit_recipes=1)
         self.assertIsInstance(dataset, list)
-        self.assertEqual(3, len(dataset))
+        self.assertEqual(1, len(dataset))
         all_are_recepies = [isinstance(x, Recipe) for x in dataset]
         self.assertTrue(all(all_are_recepies), msg=f"actual = {all_are_recepies}")
 
@@ -22,19 +22,13 @@ class UnpackData(unittest.TestCase):
         self.assertIsInstance(first.q_a[0], Q_A)
         self.assertEqual("How many actions does it take to process the minced meat?", first.q_a[0].q)
 
-        last = dataset[-1]
-        self.assertIsInstance(last, Recipe)
-        self.assertEqual("r-3509", last.id)
-        self.assertRegex(last.new_pars_str.replace("\n", " ## "), "Add rice and mix well")
-        self.assertEqual(23, len(last.q_a))
-        self.assertEqual("What should be baked in the oven?", last.q_a[0].q)
 
     def test_rewrite_to_list_of_qars(self):
-        filename = f"{get_root()}/tests/test_resources/crl_srl.csv"
-        list_of_recs = convert_dataset(filename, use_tqdm=False)
+        filename = f"{get_root()}/modules/recipe2video/data/train/crl_srl.csv"
+        list_of_recs = convert_dataset(filename, use_tqdm=False, limit_recipes=2)
         as_qars = rewrite_to_list_of_questions(list_of_recs)
         self.assertTrue(all([isinstance(x, QuestionAnswerRecipe) for x in as_qars]))
-        self.assertEqual(27 + 57 + 23, len(as_qars))
+        self.assertEqual(27 + 57, len(as_qars))
 
         first = as_qars[0]
         self.assertEqual("How many actions does it take to process the minced meat?", first.question)
@@ -45,11 +39,3 @@ class UnpackData(unittest.TestCase):
 
         self.assertIsInstance(first.qa_copy, Q_A)
         self.assertIsInstance(first.recipe, Recipe)
-
-        last = as_qars[-1]
-        self.assertEqual("Where was the mixture before it was turned into greased 2-quart baking dish?", last.question)
-        self.assertEqual("large bowl", last.answer)
-        self.assertEqual("17-1", last.question_class)
-        self.assertIsInstance(last.qa_copy, Q_A)
-        self.assertIsInstance(last.recipe, Recipe)
-        self.assertNotRegex(last.recipe_passage, "# text = ")

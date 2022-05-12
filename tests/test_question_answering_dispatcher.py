@@ -10,25 +10,27 @@ class TestQuestionAnsweringDispatcher(unittest.TestCase):
     def test_default_dispatching_rules(self):
         engine = QuestionAnsweringDispatcher()
 
-        question = QuestionAnswerRecipe(Q_A("# question 18-3 = Q?"), None)
+        question = QuestionAnswerRecipe(Q_A("# question A-B = Q?"), None)
         ret = engine.predict_answer(question)
         self.assertIsInstance(ret, PredictedAnswer)
         self.assertFalse(ret.has_answer())
-        self.assertEqual("18", ret.more_info["predicted_category"])
+        self.assertEqual("not_recognized", ret.more_info["predicted_category"])
         self.assertEqual("QuestionAnswerer N/A", ret.more_info["source"])
 
     def test_custom_dispatching_rules(self):
         dispatching_rules = {
-            "0_actions": QuestionAnswererConstantAnswer("1"),
-            "4": QuestionAnswererConstantAnswer("the first event"),
-            "8": QuestionAnswererNA()
+            "counting_actions": QuestionAnswererConstantAnswer("1"),
+            "event_ordering": QuestionAnswererConstantAnswer("the first event"),
+            "location_srl": QuestionAnswererNA()
         }
         engine = QuestionAnsweringDispatcher(dispatching_rules)
 
         questions = [
-            QuestionAnswerRecipe(Q_A("# question 18-1 = Where do you place bean sprouts?"), None),
-            QuestionAnswerRecipe(Q_A("# question 0-1 = How many actions does it take to process the minced meat?"), None),
-            QuestionAnswerRecipe(Q_A("# question 4-5 = Cutting the stem into bite - size pieces into bite - size pieces and sauting minced meat in a separate pan, which comes first?"), None)
+            QuestionAnswerRecipe(Q_A("# question A-B = Where do you place bean sprouts?"), None),
+            QuestionAnswerRecipe(Q_A("# question A-B = How many actions does it take to process the minced "
+                                     "meat?"), None),
+            QuestionAnswerRecipe(Q_A("# question A-B = Cutting the stem into bite - size pieces into bite - size"
+                                     " pieces and sauting minced meat in a separate pan, which comes first?"), None)
         ]
 
         ret = engine.predict_answers('test', False, questions)
