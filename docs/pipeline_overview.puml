@@ -49,7 +49,7 @@ interface QuestionCategoryClassifier {
   + {abstract} predict_category()
 }
 
-class GetCategoryFromQuestionId {
+class GetCategoryFromQuestionStructure {
  + predict_category(question)
 }
 
@@ -69,6 +69,6 @@ QuestionAnswererConstantAnswer -up-|>  QuestionAnsweringBase
 
 HandlerSaveToJson -up-|>  InterfaceHandler
 
-GetCategoryFromQuestionId -up-|> QuestionCategoryClassifier
+GetCategoryFromQuestionStructure -up-|> QuestionCategoryClassifier
 
 @enduml
