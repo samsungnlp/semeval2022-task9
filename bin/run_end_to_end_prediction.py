@@ -9,20 +9,19 @@ import argparse
 import os.path
 
 from src.fetch_resources import fetch_linguistic_resources
-
 from src.get_root import get_root
-from src.pipeline.answerers.class_0 import QuestionAnswerer0
-from src.pipeline.answerers.class_0_how_many_times import QuestionAnswerer0HowManyTimes
-from src.pipeline.answerers.class_0_how_many_actions import QuestionAnswerer0HowManyActions
-from src.pipeline.answerers.class_1_v2 import QuestionAnswerer1Class8Style
-from src.pipeline.answerers.class_3_what import QuestionAnswerer3What
-from src.pipeline.answerers.class_14_preheat import QuestionAnswerer14Preheat
-from src.pipeline.answerers.class_17 import QuestionAnswerer17
-from src.pipeline.answerers.class_2_6_10_14 import QuestionAnswerer2_6_10_14
-from src.pipeline.answerers.class_2_where import QuestionAnswerer2Where
-from src.pipeline.answerers.class_4_v2 import QuestionAnswerer4EventBased
-from src.pipeline.answerers.class_8 import QuestionAnswerer8
-from src.pipeline.answerers.class_3_how import QuestionAnswerer3How
+from src.pipeline.answerers.counting_actions import QuestionAnswererCountingActions
+from src.pipeline.answerers.counting_times import QuestionAnswererCountingTimes
+from src.pipeline.answerers.counting_uses import QuestionAnswererCountingUses
+from src.pipeline.answerers.ellipsis_v2 import QuestionAnswererEllipsisV2
+from src.pipeline.answerers.event_ordering_v2 import QuestionAnswererEventOrdering
+from src.pipeline.answerers.lifespan_how import QuestionAnswererLifespanHow
+from src.pipeline.answerers.lifespan_what import QuestionAnswererLifespanWhat
+from src.pipeline.answerers.location_change import QuestionAnswererLocationChange
+from src.pipeline.answerers.location_crl import QuestionAnswererLocationCrl
+from src.pipeline.answerers.method import QuestionAnswererMethod
+from src.pipeline.answerers.method_preheat import QuestionAnswererMethodPreheat
+from src.pipeline.answerers.universal_srl import QuestionAnswererUniversalSrl
 from src.pipeline.deterministic_qa_engine import QuestionAnswererNA
 from src.pipeline.end_to_end_prediction import EndToEndQuestionAnsweringPrediction
 from src.pipeline.extractive_qa import ExtractiveQuestionAnswererFactory
@@ -33,30 +32,32 @@ from src.pipeline.question_answering_dispatcher import QuestionAnsweringDispatch
 
 def get_dispatching_engine() -> QuestionAnsweringDispatcher:
     dispatching_rules = {
-        "0_times": QuestionAnswerer0HowManyTimes(),
-        "0_actions": QuestionAnswerer0HowManyActions(),
-        "0_are_used": QuestionAnswerer0(),
-        "1": QuestionAnswerer1Class8Style(["HABITAT", "TOOL"], ["EXPLICITINGREDIENT", "IMPLICITINGREDIENT"], ["Drop"]),
-        "2_where":QuestionAnswerer2Where(),
-        "2_6_10_14": QuestionAnswerer2_6_10_14(
+        "counting_times": QuestionAnswererCountingTimes(),
+        "counting_actions": QuestionAnswererCountingActions(),
+        "counting_uses": QuestionAnswererCountingUses(),
+        "ellipsis": QuestionAnswererEllipsisV2(["HABITAT", "TOOL"], ["EXPLICITINGREDIENT", "IMPLICITINGREDIENT"],
+                                               ["Drop"]),
+        "location_crl": QuestionAnswererLocationCrl(),
+        "method": QuestionAnswererMethod(
             ["EXPLICITINGREDIENT", "IMPLICITINGREDIENT"], ["TOOL"],
             ["Patient", "Theme"], ["Instrument"],
             ["Patient", "Theme"], ["Attribute"],
             ["Patient", "Theme"], ["Goal"]
         ),
-        "3_how": QuestionAnswerer3How(),
-        "3_what": QuestionAnswerer3What(),
-        "4": QuestionAnswerer4EventBased(),
-        "5": QuestionAnswerer8(["Patient"], ["Result"]),
-        "7": QuestionAnswerer8(["Patient", "Attribute", "Purpose"], ["Time"], reversed_paragraphs=False),
-        "8": QuestionAnswerer8(["Patient", "Theme"], ["Location", "Destination", "Co-Patient", "Co-Theme"]),
-        "9": QuestionAnswerer8(["Patient"], ["Extent"]),
-        "11_15": QuestionAnswerer8(["Patient"], ["Cause", "Purpose"]),
-        "12_13": QuestionAnswerer8(["Patient", "Theme"], ["Co-Patient", "Co-Theme"]),
-        "14_preheat": QuestionAnswerer14Preheat(),
-        "16": QuestionAnswerer8(["Patient"], ["Source"], reversed_paragraphs=False),
-        "17": QuestionAnswerer17(),
-        "18": ExtractiveQuestionAnswererFactory.get_extractive_answerer(),
+        "lifespan_how": QuestionAnswererLifespanHow(),
+        "lifespan_what": QuestionAnswererLifespanWhat(),
+        "event_ordering": QuestionAnswererEventOrdering(),
+        "result": QuestionAnswererUniversalSrl(["Patient"], ["Result"]),
+        "time": QuestionAnswererUniversalSrl(["Patient", "Attribute", "Purpose"], ["Time"], reversed_paragraphs=False),
+        "location_srl": QuestionAnswererUniversalSrl(["Patient", "Theme"],
+                                                     ["Location", "Destination", "Co-Patient", "Co-Theme"]),
+        "extent": QuestionAnswererUniversalSrl(["Patient"], ["Extent"]),
+        "purpose": QuestionAnswererUniversalSrl(["Patient"], ["Cause", "Purpose"]),
+        "copatient": QuestionAnswererUniversalSrl(["Patient", "Theme"], ["Co-Patient", "Co-Theme"]),
+        "method_preheat": QuestionAnswererMethodPreheat(),
+        "source": QuestionAnswererUniversalSrl(["Patient"], ["Source"], reversed_paragraphs=False),
+        "location_change": QuestionAnswererLocationChange(),
+        "not_recognized": ExtractiveQuestionAnswererFactory.get_extractive_answerer(),
         "RC": ExtractiveQuestionAnswererFactory.get_extractive_answerer()
     }
 
