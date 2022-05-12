@@ -9,12 +9,12 @@ from src.unpack_data import QuestionAnswerRecipe
 
 
 rc_thr = {
-    # "3_what": 0.8,  # disabled due to not improving results
-    # "5": 0.99,  # disabled due to not improving results
-    # "7": 0.97,  # disabled due to not improving results
-    "8": 0.98,
-    # "12_13": 0.999,  # disabled due to not improving results
-    # "16": 0.0  # disabled due to not improving results
+    # "lifespan_what": 0.8,  # disabled due to not improving results
+    # "result": 0.99,  # disabled due to not improving results
+    # "time": 0.97,  # disabled due to not improving results
+    "location_srl": 0.98,
+    # "copatient": 0.999,  # disabled due to not improving results
+    # "source": 0.0  # disabled due to not improving results
 }
 
 

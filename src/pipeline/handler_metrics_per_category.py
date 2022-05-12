@@ -18,13 +18,6 @@ class Result:
         self.predicted_answer = predicted_answer
 
 
-def cat_name_to_int(category_name: str) -> int:
-    try:
-        return int(category_name.split("_")[0])
-    except:
-        return 19  # should not mess with other categories
-
-
 class HandlerMetricsPerCategory(InterfaceHandler):
 
     def __init__(self, prefix_dir: str = None, outstream: TextIO = sys.stdout):
@@ -54,7 +47,7 @@ class HandlerMetricsPerCategory(InterfaceHandler):
         self._group_by_category(questions, answers, more_info)
 
         file = open(self.na_statistics_path, 'w')
-        for category in sorted(self.results_by_category.keys(), key=cat_name_to_int):
+        for category in sorted(self.results_by_category.keys()):
             self.handle_category(category)
             self.handle_na_category(category, file)
         file.close()
@@ -118,8 +111,10 @@ class HandlerMetricsPerCategory(InterfaceHandler):
         results = self._get_results(category_name)
         all_na_correct_answer = sum(1 for x in results if x['Actual Answer'] == 'N/A')
         pred_and_correct_na = sum(1 for x in results if x['Actual Answer'] == 'N/A' and x['Predicted Answer'] == None)
-        pred_not_na_correct_na = sum(1 for x in results if x['Actual Answer'] == 'N/A' and x['Predicted Answer'] != None)
-        pred_na_correct_not_na = sum(1 for x in results if x['Actual Answer'] != 'N/A' and x['Predicted Answer'] == None)
+        pred_not_na_correct_na = sum(
+            1 for x in results if x['Actual Answer'] == 'N/A' and x['Predicted Answer'] != None)
+        pred_na_correct_not_na = sum(
+            1 for x in results if x['Actual Answer'] != 'N/A' and x['Predicted Answer'] == None)
         print(f"Cat {category_name}, ALL_NA = {all_na_correct_answer}, pred_NA_correct_NA = {pred_and_correct_na}, "
               f"pred_NOT_NA_correct_NA = {pred_not_na_correct_na}, "
               f"pred_NA_correct_NOT_NA = {pred_na_correct_not_na}", file=file)

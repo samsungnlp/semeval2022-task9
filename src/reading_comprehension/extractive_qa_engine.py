@@ -38,9 +38,9 @@ class ReadingComprehension:
         assert self.args.set_type in ["train", "val", "test"]
 
         self.data_files = {
-            "train": "r2vq_train_10_28_2021/train/crl_srl.csv",
-            "val": "r2vq_val_12_03_2021/val/crl_srl.csv",
-            "test": "r2vq_test_12_03_2021/test/crl_srl.csv"
+            "train": "modules/recipe2video/data/train/crl_srl.csv"
+            "val": "modules/recipe2video/data/val/crl_srl.csv",
+            "test": "./modules/recipe2video/data/test/crl_srl.csv"
         }
 
         self.logger = get_logger(__class__.__name__)
@@ -129,11 +129,11 @@ class ReadingComprehension:
             self.logger.info(f"Loading features from cached file {cached_features_file}")
             return torch.load(cached_features_file)
 
-        self.logger.info(f"Creating features from dataset file {self.data_dir}/{self.data_files[self.args.set_type]}")
+        self.logger.info(f"Creating features from dataset file {self.get_root()}/{self.data_files[self.args.set_type]}")
 
         processor = SemEvalProcessor()
         recipes, examples = processor.get_examples(
-            data_dir=self.data_dir, filename=self.data_files[self.args.set_type], is_training=not evaluate
+            data_dir=get_root(), filename=self.data_files[self.args.set_type], is_training=not evaluate
         )
         features, dataset = convert_examples_to_features(
             examples=examples,

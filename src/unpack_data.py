@@ -134,17 +134,17 @@ class Recipe:
 
 
 def convert_train_data(use_tqdm: bool = True, limit_recipes=None) -> List[Recipe]:
-    data_path = f'{get_root()}/data/r2vq_train_10_28_2021/train/crl_srl.csv'
+    data_path = f'{get_root()}/modules/recipe2video/data/train/crl_srl.csv'
     return convert_dataset(data_path, use_tqdm, limit_recipes)
 
 
 def convert_val_data(use_tqdm: bool = True, limit_recipes=None) -> List[Recipe]:
-    data_path = f'{get_root()}/data/r2vq_val_12_03_2021/val/crl_srl.csv'
+    data_path = f'{get_root()}/modules/recipe2video/data/val/crl_srl.csv'
     return convert_dataset(data_path, use_tqdm, limit_recipes)
 
 
 def convert_test_data(use_tqdm: bool = True, limit_recipes=None) -> List[Recipe]:
-    data_path = f'{get_root()}/data/r2vq_test_12_03_2021/test/crl_srl.csv'
+    data_path = f'{get_root()}/modules/recipe2video/data/test/test_WITH_ANSWERS.csv'
     return convert_dataset(data_path, use_tqdm, limit_recipes)
 
 
