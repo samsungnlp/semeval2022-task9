@@ -2,7 +2,7 @@ from typing import Union
 
 from src.get_root import get_root
 from src.unpack_data import QuestionAnswerRecipe
-from src.utiles import read_dict
+from src.utils import read_dict
 
 
 class BertAnswerNA:

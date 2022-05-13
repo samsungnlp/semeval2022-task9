@@ -21,7 +21,7 @@ pip install -r ./requirements.txt
 
 ## Launch
 ```
-PYTHONPATH=`pwd` python ./bin/run_end_to_end_prediction.py --which (train|val|test)
+PYTHONPATH=`pwd` ./bin/run_end_to_end_prediction.py --which (train|val|test)
 ```
 The results will appear in `results` and in `results/per_category/(train|val|test)/`.
 

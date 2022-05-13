@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import pprint
 
 from src.data_question_class_statistics import QuestionClassStatistics
