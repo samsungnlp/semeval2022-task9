@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/env python
 #
 #  Call me:
 #  PYTHONPATH=`pwd` ./bin/run_end_to_end_prediction.py  --which [train|test|val]

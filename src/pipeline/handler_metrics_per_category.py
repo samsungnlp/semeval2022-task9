@@ -8,7 +8,7 @@ import pandas
 from src.get_root import get_root
 from src.pipeline.handler_metrics import HandlerF1, HandlerExactMatch
 from src.pipeline.handlers import InterfaceHandler, PredictedAnswer, QuestionAnswerRecipe
-from src.utiles import _create_directory_if_not_exist
+from src.utils import _create_directory_if_not_exist
 
 
 class Result:
